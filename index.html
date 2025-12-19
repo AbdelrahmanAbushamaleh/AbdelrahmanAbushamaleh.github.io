@@ -4,565 +4,201 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="Abdelrahman Abushamaleh — AI / Machine Learning Engineer Portfolio"/>
-  <title>Abdelrahman Abushamaleh | AI / ML Engineer /data scientist </title>
+  <title>Abdelrahman Abushamaleh | AI / ML Engineer / Data Scientist</title>
 
-  <style>
-    :root{
-      --bg: #fbfbff;
-      --card: rgba(255,255,255,.85);
-      --text: #0b1020;
-      --muted: rgba(11,16,32,.65);
-      --border: rgba(120, 120, 140, .18);
+<style>
+  :root{
+    --bg: #fbfbff;
+    --card: rgba(255,255,255,.85);
+    --text: #0b1020;
+    --muted: rgba(11,16,32,.65);
+    --border: rgba(120, 120, 140, .18);
 
-      --accent1: #5b7cfa;   /* blue */
-      --accent2: #8b5cf6;   /* purple */
-      --accent3: #22c55e;   /* subtle green for status dots */
-      --shadow: 0 18px 40px rgba(20, 30, 60, .10);
+    --accent1: #5b7cfa;
+    --accent2: #8b5cf6;
+    --accent3: #22c55e;
+    --shadow: 0 18px 40px rgba(20, 30, 60, .10);
 
-      --radius: 18px;
-      --max: 1100px;
-    }
+    --radius: 18px;
+    --max: 1100px;
+  }
 
-    *{ box-sizing:border-box; }
-    html, body{ height:100%; }
-    body{
-      margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-      color: var(--text);
-      background: radial-gradient(1200px 700px at 20% -10%, rgba(91,124,250,.14), transparent 55%),
-                  radial-gradient(900px 600px at 90% 10%, rgba(139,92,246,.12), transparent 55%),
-                  radial-gradient(700px 500px at 50% 110%, rgba(91,124,250,.10), transparent 50%),
-                  var(--bg);
-      overflow-x:hidden;
-    }
+  *{ box-sizing:border-box; }
+  html, body{ height:100%; }
 
-    /* Subtle AI grid / network overlay */
-    .ai-pattern{
-      position:absolute;
-      inset:-2px;
-      pointer-events:none;
-      opacity:.85;
-      background-image:
-        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='800' viewBox='0 0 1200 800'%3E%3Cdefs%3E%3CradialGradient id='g' cx='0.5' cy='0.4' r='0.8'%3E%3Cstop offset='0' stop-color='%238b5cf6' stop-opacity='.16'/%3E%3Cstop offset='0.5' stop-color='%235b7cfa' stop-opacity='.10'/%3E%3Cstop offset='1' stop-color='%235b7cfa' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect width='1200' height='800' fill='url(%23g)'/%3E%3Cg stroke='%230b1020' stroke-opacity='.08'%3E%3Cpath d='M60 110H1140'/%3E%3Cpath d='M60 220H1140'/%3E%3Cpath d='M60 330H1140'/%3E%3Cpath d='M60 440H1140'/%3E%3Cpath d='M60 550H1140'/%3E%3Cpath d='M60 660H1140'/%3E%3Cpath d='M120 60V740'/%3E%3Cpath d='M260 60V740'/%3E%3Cpath d='M400 60V740'/%3E%3Cpath d='M540 60V740'/%3E%3Cpath d='M680 60V740'/%3E%3Cpath d='M820 60V740'/%3E%3Cpath d='M960 60V740'/%3E%3Cpath d='M1080 60V740'/%3E%3C/g%3E%3Cg fill='none' stroke='%235b7cfa' stroke-opacity='.20'%3E%3Cpath d='M240 190 C320 120, 430 160, 520 120 S730 140, 860 110'/%3E%3Cpath d='M300 560 C420 520, 520 610, 640 560 S820 520, 940 570'/%3E%3C/g%3E%3Cg%3E%3Cg fill='%235b7cfa' fill-opacity='.25'%3E%3Ccircle cx='240' cy='190' r='4'/%3E%3Ccircle cx='520' cy='120' r='4'/%3E%3Ccircle cx='860' cy='110' r='4'/%3E%3Ccircle cx='300' cy='560' r='4'/%3E%3Ccircle cx='640' cy='560' r='4'/%3E%3Ccircle cx='940' cy='570' r='4'/%3E%3C/g%3E%3Cg stroke='%238b5cf6' stroke-opacity='.22'%3E%3Cline x1='240' y1='190' x2='520' y2='120'/%3E%3Cline x1='520' y1='120' x2='860' y2='110'/%3E%3Cline x1='300' y1='560' x2='640' y2='560'/%3E%3Cline x1='640' y1='560' x2='940' y2='570'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-      background-size: cover;
-      filter: saturate(1.08);
-      animation: drift 18s ease-in-out infinite alternate;
-    }
+  body{
+    margin:0;
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+    color: var(--text);
+    background:
+      radial-gradient(1200px 700px at 20% -10%, rgba(91,124,250,.14), transparent 55%),
+      radial-gradient(900px 600px at 90% 10%, rgba(139,92,246,.12), transparent 55%),
+      radial-gradient(700px 500px at 50% 110%, rgba(91,124,250,.10), transparent 50%),
+      var(--bg);
+    overflow-x:hidden;
+  }
 
-    @keyframes drift{
-      0%{ transform: translate3d(0,0,0) scale(1.02); }
-      100%{ transform: translate3d(-14px, 10px, 0) scale(1.02); }
-    }
+  .ai-pattern{
+    position:absolute;
+    inset:-2px;
+    pointer-events:none;
+    opacity:.85;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='800' viewBox='0 0 1200 800'%3E%3Cdefs%3E%3CradialGradient id='g' cx='0.5' cy='0.4' r='0.8'%3E%3Cstop offset='0' stop-color='%238b5cf6' stop-opacity='.16'/%3E%3Cstop offset='0.5' stop-color='%235b7cfa' stop-opacity='.10'/%3E%3Cstop offset='1' stop-color='%235b7cfa' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect width='1200' height='800' fill='url(%23g)'/%3E%3Cg stroke='%230b1020' stroke-opacity='.08'%3E%3Cpath d='M60 110H1140'/%3E%3Cpath d='M60 220H1140'/%3E%3Cpath d='M60 330H1140'/%3E%3Cpath d='M60 440H1140'/%3E%3Cpath d='M60 550H1140'/%3E%3Cpath d='M60 660H1140'/%3E%3Cpath d='M120 60V740'/%3E%3Cpath d='M260 60V740'/%3E%3Cpath d='M400 60V740'/%3E%3Cpath d='M540 60V740'/%3E%3Cpath d='M680 60V740'/%3E%3Cpath d='M820 60V740'/%3E%3Cpath d='M960 60V740'/%3E%3Cpath d='M1080 60V740'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: cover;
+    animation: drift 18s ease-in-out infinite alternate;
+  }
 
-    /* Layout */
-    .page{
-      position:relative;
-      min-height:100%;
-    }
+  @keyframes drift{
+    0%{ transform: translate3d(0,0,0) scale(1.02); }
+    100%{ transform: translate3d(-14px, 10px, 0) scale(1.02); }
+  }
 
-    .container{
-      width:min(var(--max), calc(100% - 40px));
-      margin:0 auto;
-      position:relative;
-      z-index:1;
-    }
+  .page{ position:relative; min-height:100%; }
 
-    header{
-      position:sticky;
-      top:0;
-      z-index:50;
-      backdrop-filter: blur(10px);
-      background: linear-gradient(to bottom, rgba(251,251,255,.85), rgba(251,251,255,.60));
-      border-bottom: 1px solid rgba(120,120,140,.10);
-    }
+  .container{
+    width:min(var(--max), calc(100% - 40px));
+    margin:0 auto;
+    position:relative;
+    z-index:1;
+  }
 
-    .nav{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      padding:14px 0;
-      gap:14px;
-    }
+  header{
+    position:sticky;
+    top:0;
+    z-index:50;
+    backdrop-filter: blur(10px);
+    background: linear-gradient(to bottom, rgba(251,251,255,.85), rgba(251,251,255,.60));
+    border-bottom: 1px solid rgba(120,120,140,.10);
+  }
 
-    .brand{
-      display:flex; align-items:center; gap:10px;
-      text-decoration:none;
-      color:var(--text);
-      font-weight:700;
-      letter-spacing:.2px;
-    }
+  section{ padding:72px 0; }
 
-    .brand-badge{
-      width:34px; height:34px;
-      border-radius:12px;
-      display:grid; place-items:center;
-      border: 1px solid rgba(91,124,250,.25);
-      background: radial-gradient(circle at 30% 30%, rgba(91,124,250,.20), transparent 65%),
-                  radial-gradient(circle at 70% 70%, rgba(139,92,246,.20), transparent 65%),
-                  rgba(255,255,255,.65);
-      box-shadow: 0 10px 20px rgba(20,30,60,.08);
-      transition: transform .2s ease;
-    }
-    .brand:hover .brand-badge{ transform: translateY(-1px); }
+  .hero-wrap{
+    display:grid;
+    grid-template-columns:1.25fr .75fr;
+    gap:28px;
+    align-items:center;
+  }
 
-    nav a{
-      color: var(--muted);
-      text-decoration:none;
-      font-weight:600;
-      font-size:14px;
-      padding:10px 10px;
-      border-radius:12px;
-      transition: background .2s ease, color .2s ease;
-    }
-    nav a:hover{
-      color: var(--text);
-      background: rgba(91,124,250,.08);
-    }
+  @media (max-width:900px){
+    .hero-wrap{ grid-template-columns:1fr; }
+  }
 
-    .nav-right{
-      display:flex; gap:6px; align-items:center;
-      flex-wrap:wrap;
-      justify-content:flex-end;
-    }
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:12px 14px;
+    border-radius:14px;
+    border:1px solid var(--border);
+    background:rgba(255,255,255,.75);
+    font-weight:800;
+    text-decoration:none;
+    color:var(--text);
+    transition:.18s ease;
+  }
 
-    /* Sections */
-    section{ padding: 72px 0; }
-    .hero{
-      padding: 62px 0 40px;
-    }
+  .btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 16px 34px rgba(20,30,60,.10);
+  }
 
-    .grid{
-      display:grid;
-      gap:16px;
-    }
+  .reveal{
+    opacity:0;
+    transform:translateY(14px);
+    transition:opacity .7s ease, transform .7s ease;
+  }
 
-    .hero-wrap{
-      display:grid;
-      grid-template-columns: 1.25fr .75fr;
-      gap: 28px;
-      align-items:center;
-    }
+  .reveal.in{
+    opacity:1;
+    transform:none;
+  }
 
-    @media (max-width: 900px){
-      .hero-wrap{ grid-template-columns: 1fr; }
-      section{ padding: 62px 0; }
-    }
+  .delay-1{ transition-delay:.08s; }
+  .delay-2{ transition-delay:.16s; }
+  .delay-3{ transition-delay:.24s; }
 
-    .kicker{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      padding:10px 12px;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      background: rgba(255,255,255,.65);
-      font-weight:700;
-      color: rgba(11,16,32,.75);
-      font-size: 13px;
-      width: fit-content;
-    }
+  @media (prefers-reduced-motion: reduce){
+    .ai-pattern{ animation:none; }
+    .reveal{ opacity:1; transform:none; }
+  }
+  /* ===== RESTORED CORE LAYOUT STYLES ===== */
 
-    .dot{
-      width:8px; height:8px; border-radius:99px;
-      background: var(--accent3);
-      box-shadow: 0 0 0 6px rgba(34,197,94,.10);
-    }
+.nav{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+}
 
-    h1{
-      margin: 16px 0 10px;
-      font-size: clamp(34px, 4.2vw, 56px);
-      letter-spacing: -0.9px;
-      line-height: 1.08;
-    }
+.nav-right{
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
 
-    .grad{
-      background: linear-gradient(90deg, var(--accent1), var(--accent2));
-      -webkit-background-clip:text;
-      background-clip:text;
-      color:transparent;
-    }
+.brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-weight:700;
+  text-decoration:none;
+  color:var(--text);
+}
 
-    .subtitle{
-      margin: 0 0 18px;
-      font-size: 17px;
-      color: var(--muted);
-      line-height: 1.65;
-      max-width: 62ch;
-    }
+.brand-badge{
+  width:34px;
+  height:34px;
+  border-radius:12px;
+  display:grid;
+  place-items:center;
+  border:1px solid rgba(91,124,250,.25);
+  background:rgba(255,255,255,.7);
+}
 
-    .cta-row{
-      display:flex;
-      gap: 12px;
-      flex-wrap:wrap;
-      margin-top: 18px;
-    }
+.icon{ width:18px; height:18px; }
 
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      padding: 12px 14px;
-      border-radius: 14px;
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,.75);
-      color: var(--text);
-      text-decoration:none;
-      font-weight:800;
-      font-size: 14px;
-      box-shadow: 0 12px 24px rgba(20,30,60,.06);
-      transition: transform .18s ease, box-shadow .18s ease, background .18s ease, border-color .18s ease;
-      will-change: transform;
-    }
-    .btn:hover{
-      transform: translateY(-2px);
-      border-color: rgba(91,124,250,.35);
-      box-shadow: 0 16px 34px rgba(20,30,60,.10);
-    }
-    .btn:active{ transform: translateY(0px) scale(.98); }
+.hero{ padding:62px 0 40px; }
 
-    .btn-primary{
-      border-color: rgba(91,124,250,.35);
-      background: linear-gradient(135deg, rgba(91,124,250,.14), rgba(139,92,246,.14));
-    }
+.kicker{
+  display:inline-flex;
+  gap:10px;
+  padding:10px 12px;
+  border-radius:999px;
+  border:1px solid var(--border);
+  font-weight:700;
+}
 
-    .icon{
-      width:18px; height:18px; display:inline-block;
-    }
+.dot{
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:var(--accent3);
+}
 
-    /* Side hero card */
-    .hero-card{
-      border-radius: var(--radius);
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,.72);
-      box-shadow: var(--shadow);
-      padding: 18px;
-      position:relative;
-      overflow:hidden;
-    }
+.grad{
+  background:linear-gradient(90deg,var(--accent1),var(--accent2));
+  -webkit-background-clip:text;
+  color:transparent;
+}
 
-    .hero-card::before{
-      content:"";
-      position:absolute;
-      inset:-40px;
-      background: radial-gradient(circle at 20% 20%, rgba(91,124,250,.18), transparent 45%),
-                  radial-gradient(circle at 80% 30%, rgba(139,92,246,.14), transparent 50%),
-                  radial-gradient(circle at 50% 80%, rgba(91,124,250,.10), transparent 55%);
-      filter: blur(0px);
-      opacity:.9;
-      pointer-events:none;
-    }
+.subtitle{ max-width:60ch; }
 
-    .hero-card-inner{
-      position:relative;
-      z-index:1;
-    }
+.cta-row{ display:flex; gap:12px; flex-wrap:wrap; }
 
-    .mini-title{
-      display:flex; align-items:center; gap:10px;
-      font-weight:900;
-      margin-bottom: 10px;
-      letter-spacing: .2px;
-    }
+.btn-primary{
+  border-color:rgba(91,124,250,.35);
+  background:linear-gradient(135deg, rgba(91,124,250,.14), rgba(139,92,246,.14));
+}
 
-    .mini-title small{
-      font-weight:800;
-      color: rgba(11,16,32,.60);
-    }
+</style>
 
-    .stat{
-      display:flex;
-      align-items:flex-start;
-      gap:12px;
-      padding: 12px;
-      border-radius: 14px;
-      border: 1px solid rgba(120,120,140,.12);
-      background: rgba(255,255,255,.65);
-      margin-top: 10px;
-      transition: transform .18s ease, border-color .18s ease;
-    }
-    .stat:hover{
-      transform: translateY(-2px);
-      border-color: rgba(139,92,246,.28);
-    }
-    .stat p{
-      margin:0;
-      color: rgba(11,16,32,.72);
-      font-size: 14px;
-      line-height: 1.45;
-    }
-    .stat b{
-      display:block;
-      margin-bottom: 4px;
-      color: var(--text);
-    }
-
-    /* Section headers */
-    .section-head{
-      display:flex;
-      align-items:flex-end;
-      justify-content:space-between;
-      gap: 14px;
-      margin-bottom: 18px;
-    }
-    .section-head h2{
-      margin:0;
-      font-size: 22px;
-      letter-spacing: -.3px;
-    }
-    .section-head p{
-      margin:0;
-      color: var(--muted);
-      max-width: 58ch;
-      font-size: 14px;
-      line-height: 1.6;
-    }
-
-    /* Cards */
-    .cards{
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-      margin-top: 18px;
-    }
-    @media (max-width: 980px){
-      .cards{ grid-template-columns: 1fr; }
-    }
-
-    .card{
-      border-radius: var(--radius);
-      border: 1px solid var(--border);
-      background: var(--card);
-      box-shadow: 0 12px 30px rgba(20,30,60,.06);
-      padding: 18px;
-      position:relative;
-      overflow:hidden;
-      transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
-      will-change: transform;
-    }
-
-    .card::after{
-      content:"";
-      position:absolute;
-      inset:-60px;
-      background: radial-gradient(circle at 15% 20%, rgba(91,124,250,.14), transparent 50%),
-                  radial-gradient(circle at 85% 30%, rgba(139,92,246,.12), transparent 55%);
-      opacity:0;
-      transition: opacity .18s ease;
-      pointer-events:none;
-    }
-
-    .card:hover{
-      transform: translateY(-4px);
-      border-color: rgba(91,124,250,.30);
-      box-shadow: 0 18px 44px rgba(20,30,60,.10);
-    }
-    .card:hover::after{ opacity:1; }
-
-    .card-top{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap: 12px;
-      margin-bottom: 10px;
-      position:relative;
-      z-index:1;
-    }
-
-    .badge{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      padding: 8px 10px;
-      border-radius: 999px;
-      border: 1px solid rgba(120,120,140,.14);
-      background: rgba(255,255,255,.7);
-      font-weight:800;
-      font-size:12px;
-      color: rgba(11,16,32,.70);
-      white-space:nowrap;
-    }
-
-    .card h3{
-      margin: 10px 0 8px;
-      font-size: 18px;
-      letter-spacing: -.2px;
-      position:relative;
-      z-index:1;
-    }
-
-    .card p{
-      margin:0 0 12px;
-      color: var(--muted);
-      line-height: 1.6;
-      font-size: 14px;
-      position:relative;
-      z-index:1;
-    }
-
-    .tech{
-      display:flex;
-      flex-wrap:wrap;
-      gap: 8px;
-      position:relative;
-      z-index:1;
-    }
-
-    .chip{
-      padding: 8px 10px;
-      border-radius: 999px;
-      border: 1px solid rgba(120,120,140,.12);
-      background: rgba(255,255,255,.65);
-      font-weight:800;
-      font-size:12px;
-      color: rgba(11,16,32,.72);
-    }
-
-    /* Skills grid */
-    .skills{
-      display:grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
-      margin-top: 18px;
-    }
-    @media (max-width: 980px){
-      .skills{ grid-template-columns: 1fr 1fr; }
-    }
-    @media (max-width: 520px){
-      .skills{ grid-template-columns: 1fr; }
-    }
-
-    .skill-card{
-      border-radius: var(--radius);
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,.72);
-      padding: 16px;
-      box-shadow: 0 12px 28px rgba(20,30,60,.06);
-      transition: transform .18s ease, border-color .18s ease;
-      position:relative;
-      overflow:hidden;
-    }
-    .skill-card:hover{
-      transform: translateY(-3px);
-      border-color: rgba(139,92,246,.28);
-    }
-
-    .skill-head{
-      display:flex; align-items:center; gap:10px;
-      margin-bottom: 10px;
-      font-weight:900;
-    }
-    .skill-card ul{
-      margin:0;
-      padding-left: 18px;
-      color: rgba(11,16,32,.70);
-      line-height: 1.7;
-      font-weight:600;
-      font-size: 14px;
-    }
-
-    /* Education timeline */
-    .timeline{
-      display:grid;
-      grid-template-columns: 28px 1fr;
-      gap: 14px;
-      margin-top: 18px;
-      align-items:flex-start;
-    }
-
-    .rail{
-      position:relative;
-      width:28px;
-      display:flex;
-      justify-content:center;
-    }
-    .rail::before{
-      content:"";
-      position:absolute;
-      top: 4px;
-      bottom: 4px;
-      width:2px;
-      background: linear-gradient(var(--accent1), var(--accent2));
-      opacity:.35;
-      border-radius: 999px;
-    }
-    .node{
-      width:14px; height:14px;
-      border-radius: 999px;
-      background: linear-gradient(135deg, var(--accent1), var(--accent2));
-      box-shadow: 0 0 0 6px rgba(91,124,250,.10);
-      margin-top: 4px;
-    }
-
-    .edu-card{
-      border-radius: var(--radius);
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,.72);
-      box-shadow: 0 12px 30px rgba(20,30,60,.06);
-      padding: 18px;
-    }
-    .edu-card h3{ margin:0 0 6px; }
-    .edu-card p{ margin:0; color: var(--muted); line-height: 1.6; }
-
-    /* Contact */
-    .contact{
-      display:flex;
-      gap: 12px;
-      flex-wrap:wrap;
-      margin-top: 18px;
-    }
-    .contact a{
-      display:inline-flex; align-items:center; gap:10px;
-      padding: 12px 14px;
-      border-radius: 14px;
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,.72);
-      text-decoration:none;
-      color: var(--text);
-      font-weight:900;
-      transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
-      box-shadow: 0 12px 26px rgba(20,30,60,.06);
-    }
-    .contact a:hover{
-      transform: translateY(-2px);
-      border-color: rgba(91,124,250,.35);
-      box-shadow: 0 18px 36px rgba(20,30,60,.10);
-    }
-
-    footer{
-      padding: 26px 0 44px;
-      color: rgba(11,16,32,.55);
-      font-weight:700;
-      font-size: 13px;
-    }
-
-    /* Reveal animations (lightweight) */
-    .reveal{
-      opacity: 0;
-      transform: translateY(14px);
-      transition: opacity .7s ease, transform .7s ease;
-    }
-    .reveal.in{
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .delay-1{ transition-delay: .08s; }
-    .delay-2{ transition-delay: .16s; }
-    .delay-3{ transition-delay: .24s; }
-
-    /* Accessibility */
-    @media (prefers-reduced-motion: reduce){
-      .ai-pattern{ animation:none; }
-      .reveal, .btn, .card, .skill-card, .contact a, .stat{ transition:none !important; }
-      .reveal{ opacity: 1; transform:none; }
-    }
-  </style>
 </head>
-
 <body>
   <div class="page">
     <div class="ai-pattern" aria-hidden="true"></div>
 
+    <!-- ================= HEADER ================= -->
     <header>
       <div class="container">
         <div class="nav">
@@ -570,12 +206,16 @@
             <span class="brand-badge" aria-hidden="true">
               <!-- minimal AI chip icon -->
               <svg class="icon" viewBox="0 0 24 24" fill="none">
-                <path d="M9 3v2m6-2v2M9 19v2m6-2v2M3 9h2m-2 6h2m14-6h2m-2 6h2" stroke="rgba(11,16,32,.75)" stroke-width="1.6" stroke-linecap="round"/>
-                <rect x="7" y="7" width="10" height="10" rx="2.2" stroke="rgba(91,124,250,.95)" stroke-width="1.6"/>
-                <path d="M10 12h4M12 10v4" stroke="rgba(139,92,246,.95)" stroke-width="1.6" stroke-linecap="round"/>
+                <path d="M9 3v2m6-2v2M9 19v2m6-2v2M3 9h2m-2 6h2m14-6h2m-2 6h2"
+                      stroke="rgba(11,16,32,.75)" stroke-width="1.6" stroke-linecap="round"/>
+                <rect x="7" y="7" width="10" height="10" rx="2.2"
+                      stroke="rgba(91,124,250,.95)" stroke-width="1.6"/>
+                <path d="M10 12h4M12 10v4"
+                      stroke="rgba(139,92,246,.95)" stroke-width="1.6" stroke-linecap="round"/>
               </svg>
             </span>
-            Abdelrahman <span style="color:rgba(11,16,32,.55);font-weight:800;">/ AI·ML</span>
+            Abdelrahman
+            <span style="color:rgba(11,16,32,.55);font-weight:800;">/ AI·ML</span>
           </a>
 
           <nav class="nav-right" aria-label="Primary">
@@ -590,101 +230,109 @@
     </header>
 
     <main id="top">
-      <!-- HERO -->
+      <!-- ================= HERO ================= -->
       <section class="hero">
         <div class="container">
           <div class="hero-wrap">
+
+            <!-- LEFT HERO -->
             <div>
-              <div class="kicker reveal in">
+              <div class="kicker reveal">
                 <span class="dot" aria-hidden="true"></span>
                 Futuristic • Clean • Recruiter-ready
               </div>
 
-              <h1 class="reveal in delay-1">
+              <h1 class="reveal delay-1">
                 Abdelrahman <span class="grad">Abushamaleh</span>
               </h1>
 
-              <p class="subtitle reveal in delay-2">
+              <p class="subtitle reveal delay-2">
                 <b>AI / Machine Learning Engineer / Data Scientist</b><br/>
-                AI & Machine Learning Engineer with hands-on experience in data preprocessing, model training, and performance 
-evaluation using Python, Pandas, NumPy, Scikit-learn, TensorFlow, and PyTorch. Proficient in computer vision and natural 
-language processing. Skilled in building and deploying deep-learning models, automating data pipelines, and translating 
-data insights into practical solutions. Passionate about developing intelligent systems that solve real-world problem .
+                AI & Machine Learning Engineer with hands-on experience in data preprocessing,
+                model training, and evaluation using Python, Pandas, NumPy, Scikit-learn,
+                TensorFlow, and PyTorch. Proficient in computer vision and NLP.
+                Passionate about building intelligent systems that solve real-world problems.
               </p>
 
-              <div class="cta-row reveal in delay-3">
+              <div class="cta-row reveal delay-3">
                 <a class="btn btn-primary" href="#projects">
                   <!-- nodes icon -->
                   <svg class="icon" viewBox="0 0 24 24" fill="none">
                     <circle cx="6" cy="8" r="2.2" stroke="rgba(11,16,32,.75)" stroke-width="1.6"/>
                     <circle cx="18" cy="6" r="2.2" stroke="rgba(11,16,32,.75)" stroke-width="1.6"/>
                     <circle cx="18" cy="16" r="2.2" stroke="rgba(11,16,32,.75)" stroke-width="1.6"/>
-                    <path d="M8 8l8-2M8 9.5l8 5M18 8.2v5.5" stroke="rgba(91,124,250,.95)" stroke-width="1.6" stroke-linecap="round"/>
+                    <path d="M8 8l8-2M8 9.5l8 5M18 8.2v5.5"
+                          stroke="rgba(91,124,250,.95)" stroke-width="1.6"
+                          stroke-linecap="round"/>
                   </svg>
                   View Projects
                 </a>
 
-                <a class="btn" href="https://github.com/AbdelrahmanAbushamaleh" target="_blank" rel="noopener">
+                <a class="btn"
+                   href="https://github.com/AbdelrahmanAbushamaleh"
+                   target="_blank" rel="noopener">
                   <!-- github icon -->
                   <svg class="icon" viewBox="0 0 24 24" fill="none">
-                    <path d="M12 2.5a9.5 9.5 0 00-3 18.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.2-3.4-1.2-.5-1.2-1.2-1.5-1.2-1.5-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 .1 1.6-.8 1.8-1.2.1-.7.4-1.2.7-1.5-2.2-.2-4.6-1.1-4.6-5 0-1.1.4-2 1.1-2.7-.1-.3-.5-1.3.1-2.7 0 0 .9-.3 2.8 1.1a9.4 9.4 0 015.2 0c1.9-1.4 2.8-1.1 2.8-1.1.6 1.4.2 2.4.1 2.7.7.7 1.1 1.6 1.1 2.7 0 3.9-2.4 4.8-4.7 5 .4.3.7 1 .7 1.9v2.8c0 .3.2.6.7.5A9.5 9.5 0 0012 2.5z"
-                          stroke="rgba(11,16,32,.75)" stroke-width="1.2" />
+                    <path d="M12 2.5a9.5 9.5 0 00-3 18.5c.5.1.7-.2.7-.5v-1.7
+                             c-2.8.6-3.4-1.2-3.4-1.2-.5-1.2-1.2-1.5-1.2-1.5
+                             -1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1
+                             1 .1 1.6-.8 1.8-1.2.1-.7.4-1.2.7-1.5
+                             -2.2-.2-4.6-1.1-4.6-5 0-1.1.4-2 1.1-2.7
+                             -.1-.3-.5-1.3.1-2.7 0 0 .9-.3 2.8 1.1
+                             a9.4 9.4 0 015.2 0c1.9-1.4 2.8-1.1 2.8-1.1
+                             .6 1.4.2 2.4.1 2.7.7.7 1.1 1.6 1.1 2.7
+                             0 3.9-2.4 4.8-4.7 5 .4.3.7 1 .7 1.9v2.8
+                             c0 .3.2.6.7.5A9.5 9.5 0 0012 2.5z"
+                          stroke="rgba(11,16,32,.75)" stroke-width="1.2"/>
                   </svg>
                   GitHub
                 </a>
 
-                <a class="btn" href="https://www.linkedin.com/in/abdelrahman-abushamaleh/" target="_blank" rel="noopener">
+                <a class="btn"
+                   href="https://www.linkedin.com/in/abdelrahman-abushamaleh/"
+                   target="_blank" rel="noopener">
                   <!-- linkedin icon -->
                   <svg class="icon" viewBox="0 0 24 24" fill="none">
-                    <path d="M6.5 9.5v10M6.5 6.8a1.6 1.6 0 110-3.2 1.6 1.6 0 010 3.2zM10.5 19.5v-6.2c0-2 1.2-3.3 3.1-3.3 1.7 0 2.9 1 2.9 3.4v6.1"
-                          stroke="rgba(11,16,32,.75)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6.5 9.5v10
+                             M6.5 6.8a1.6 1.6 0 110-3.2
+                             1.6 1.6 0 010 3.2z
+                             M10.5 19.5v-6.2
+                             c0-2 1.2-3.3 3.1-3.3
+                             1.7 0 2.9 1 2.9 3.4v6.1"
+                          stroke="rgba(11,16,32,.75)" stroke-width="1.6"
+                          stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
                   LinkedIn
                 </a>
               </div>
             </div>
 
-            <!-- right side mini panel -->
+            <!-- RIGHT HERO CARD -->
             <aside class="hero-card reveal" data-reveal>
               <div class="hero-card-inner">
                 <div class="mini-title">
                   <!-- brain icon -->
                   <svg class="icon" viewBox="0 0 24 24" fill="none">
-                    <path d="M9 20c-2 0-3.5-1.5-3.5-3.5V9.8C5.5 7 7.6 5 10.2 5c.6-1.2 1.8-2 3.3-2 2 0 3.6 1.6 3.6 3.6v.1c1.2.7 2 2 2 3.4v3.3c0 2-1.6 3.6-3.6 3.6H9z"
-                          stroke="rgba(11,16,32,.75)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M9 8.5c.7-.8 2.1-.8 2.8 0M9 12c.7-.8 2.1-.8 2.8 0M12.9 8.5c.7-.8 2.1-.8 2.8 0M12.9 12c.7-.8 2.1-.8 2.8 0"
-                          stroke="rgba(91,124,250,.9)" stroke-width="1.3" stroke-linecap="round"/>
+                    <path d="M9 20c-2 0-3.5-1.5-3.5-3.5V9.8
+                             C5.5 7 7.6 5 10.2 5
+                             c.6-1.2 1.8-2 3.3-2
+                             2 0 3.6 1.6 3.6 3.6v.1
+                             c1.2.7 2 2 2 3.4v3.3
+                             c0 2-1.6 3.6-3.6 3.6H9z"
+                          stroke="rgba(11,16,32,.75)" stroke-width="1.6"
+                          stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
                   Focus <small>AI • CV • Data</small>
                 </div>
 
                 <div class="stat">
-                  <!-- data flow icon -->
-                  <svg class="icon" viewBox="0 0 24 24" fill="none">
-                    <path d="M4 7h9a3 3 0 010 6H7a3 3 0 000 6h13" stroke="rgba(139,92,246,.95)" stroke-width="1.6" stroke-linecap="round"/>
-                    <path d="M20 19l-2-2m2 2l-2 2" stroke="rgba(11,16,32,.65)" stroke-width="1.6" stroke-linecap="round"/>
-                  </svg>
-                  <div>
-                    <b>What I build</b>
-                    <p>Models that turn complex signals (images, audio, behavior) into reliable decisions.</p>
-                  </div>
+                  <b>What I build</b>
+                  <p>Models that turn complex signals into reliable decisions.</p>
                 </div>
 
                 <div class="stat">
-                  <!-- graph icon -->
-                  <svg class="icon" viewBox="0 0 24 24" fill="none">
-                    <path d="M4 19V5" stroke="rgba(11,16,32,.65)" stroke-width="1.6" stroke-linecap="round"/>
-                    <path d="M4 19h16" stroke="rgba(11,16,32,.65)" stroke-width="1.6" stroke-linecap="round"/>
-                    <path d="M7 14l3-3 3 2 5-6" stroke="rgba(91,124,250,.95)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-                    <circle cx="7" cy="14" r="1.2" fill="rgba(139,92,246,.85)"/>
-                    <circle cx="10" cy="11" r="1.2" fill="rgba(139,92,246,.85)"/>
-                    <circle cx="13" cy="13" r="1.2" fill="rgba(139,92,246,.85)"/>
-                    <circle cx="18" cy="7" r="1.2" fill="rgba(139,92,246,.85)"/>
-                  </svg>
-                  <div>
-                    <b>My approach</b>
-                    <p>Clean pipelines, measurable metrics, and production-minded ML engineering.</p>
-                  </div>
+                  <b>My approach</b>
+                  <p>Clean pipelines, measurable metrics, production-minded ML.</p>
                 </div>
               </div>
             </aside>
@@ -692,8 +340,7 @@ data insights into practical solutions. Passionate about developing intelligent 
           </div>
         </div>
       </section>
-
-      <!-- PROJECTS -->
+            <!-- ================= PROJECTS ================= -->
       <section id="projects">
         <div class="container">
           <div class="section-head">
@@ -708,19 +355,12 @@ data insights into practical solutions. Passionate about developing intelligent 
           <div class="cards">
             <article class="card reveal" data-reveal>
               <div class="card-top">
-                <span class="badge">
-                  <!-- cv icon -->
-                  <svg class="icon" viewBox="0 0 24 24" fill="none">
-                    <path d="M4 7h16v10H4z" stroke="rgba(11,16,32,.65)" stroke-width="1.6" stroke-linejoin="round"/>
-                    <path d="M8 11h8M8 14h6" stroke="rgba(91,124,250,.95)" stroke-width="1.6" stroke-linecap="round"/>
-                  </svg>
-                  Computer Vision
-                </span>
+                <span class="badge">Computer Vision</span>
               </div>
-
               <h3>Urban Street Defect Detection</h3>
-              <p>Semantic segmentation using CNN-based deep learning models to detect and localize road defects in street imagery.</p>
-
+              <p>
+                Semantic segmentation using CNN-based deep learning models to detect and localize road defects in street imagery.
+              </p>
               <div class="tech">
                 <span class="chip">Python</span>
                 <span class="chip">PyTorch</span>
@@ -731,21 +371,12 @@ data insights into practical solutions. Passionate about developing intelligent 
 
             <article class="card reveal delay-1" data-reveal>
               <div class="card-top">
-                <span class="badge">
-                  <!-- audio icon -->
-                  <svg class="icon" viewBox="0 0 24 24" fill="none">
-                    <path d="M4 10v4m3-6v8m3-10v12m4-10v8m3-6v4"
-                          stroke="rgba(139,92,246,.95)" stroke-width="1.6" stroke-linecap="round"/>
-                    <path d="M19 7a3 3 0 013 3v4a3 3 0 01-3 3"
-                          stroke="rgba(11,16,32,.65)" stroke-width="1.6" stroke-linecap="round"/>
-                  </svg>
-                  Audio ML
-                </span>
+                <span class="badge">Audio ML</span>
               </div>
-
               <h3>Speaker Recognition System</h3>
-              <p>CNN-based speaker identification using MFCC audio features for robust recognition across varying voice samples.</p>
-
+              <p>
+                CNN-based speaker identification using MFCC audio features for robust recognition across varying voice samples.
+              </p>
               <div class="tech">
                 <span class="chip">Python</span>
                 <span class="chip">Librosa</span>
@@ -756,19 +387,12 @@ data insights into practical solutions. Passionate about developing intelligent 
 
             <article class="card reveal delay-2" data-reveal>
               <div class="card-top">
-                <span class="badge">
-                  <!-- recommender icon -->
-                  <svg class="icon" viewBox="0 0 24 24" fill="none">
-                    <path d="M6 6h12v12H6z" stroke="rgba(11,16,32,.65)" stroke-width="1.6" stroke-linejoin="round"/>
-                    <path d="M8.5 12l2 2 5-5" stroke="rgba(91,124,250,.95)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                  Personalization
-                </span>
+                <span class="badge">Personalization</span>
               </div>
-
               <h3>Recommender System</h3>
-              <p>Collaborative filtering and ML models to deliver personalized recommendations with practical evaluation metrics.</p>
-
+              <p>
+                Collaborative filtering and ML models to deliver personalized recommendations with practical evaluation metrics.
+              </p>
               <div class="tech">
                 <span class="chip">Python</span>
                 <span class="chip">Pandas</span>
@@ -780,7 +404,7 @@ data insights into practical solutions. Passionate about developing intelligent 
         </div>
       </section>
 
-      <!-- SKILLS -->
+      <!-- ================= SKILLS ================= -->
       <section id="skills">
         <div class="container">
           <div class="section-head">
@@ -794,30 +418,19 @@ data insights into practical solutions. Passionate about developing intelligent 
 
           <div class="skills">
             <div class="skill-card reveal" data-reveal>
-              <div class="skill-head">
-                <!-- code icon -->
-                <svg class="icon" viewBox="0 0 24 24" fill="none">
-                  <path d="M9 18l-6-6 6-6M15 6l6 6-6 6" stroke="rgba(91,124,250,.95)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                Programming
-              </div>
+              <div class="skill-head">Programming</div>
               <ul>
                 <li>Python</li>
                 <li>SQL</li>
+                <li>C++</li>
+                <li>C#</li>
+                <li>JavaScript</li>
+                <li>HTML / CSS</li>
               </ul>
             </div>
 
             <div class="skill-card reveal delay-1" data-reveal>
-              <div class="skill-head">
-                <!-- model icon -->
-                <svg class="icon" viewBox="0 0 24 24" fill="none">
-                  <circle cx="7" cy="8" r="2" stroke="rgba(11,16,32,.65)" stroke-width="1.6"/>
-                  <circle cx="17" cy="8" r="2" stroke="rgba(11,16,32,.65)" stroke-width="1.6"/>
-                  <circle cx="12" cy="16" r="2" stroke="rgba(11,16,32,.65)" stroke-width="1.6"/>
-                  <path d="M9 9.2l2.2 5M15 9.2l-2.2 5M9.2 8h5.6" stroke="rgba(139,92,246,.95)" stroke-width="1.6" stroke-linecap="round"/>
-                </svg>
-                Machine Learning
-              </div>
+              <div class="skill-head">Machine Learning</div>
               <ul>
                 <li>Scikit-learn</li>
                 <li>PyTorch</li>
@@ -826,15 +439,7 @@ data insights into practical solutions. Passionate about developing intelligent 
             </div>
 
             <div class="skill-card reveal delay-2" data-reveal>
-              <div class="skill-head">
-                <!-- camera/vision icon -->
-                <svg class="icon" viewBox="0 0 24 24" fill="none">
-                  <path d="M4 8h16v10H4z" stroke="rgba(11,16,32,.65)" stroke-width="1.6" stroke-linejoin="round"/>
-                  <path d="M9 8l1.2-2h3.6L15 8" stroke="rgba(11,16,32,.65)" stroke-width="1.6" stroke-linejoin="round"/>
-                  <circle cx="12" cy="13" r="2.8" stroke="rgba(91,124,250,.95)" stroke-width="1.6"/>
-                </svg>
-                Computer Vision
-              </div>
+              <div class="skill-head">Computer Vision</div>
               <ul>
                 <li>OpenCV</li>
                 <li>CNNs</li>
@@ -843,15 +448,7 @@ data insights into practical solutions. Passionate about developing intelligent 
             </div>
 
             <div class="skill-card reveal delay-3" data-reveal>
-              <div class="skill-head">
-                <!-- data icon -->
-                <svg class="icon" viewBox="0 0 24 24" fill="none">
-                  <path d="M6 7c0-1.7 2.7-3 6-3s6 1.3 6 3-2.7 3-6 3-6-1.3-6-3z" stroke="rgba(11,16,32,.65)" stroke-width="1.6"/>
-                  <path d="M6 7v5c0 1.7 2.7 3 6 3s6-1.3 6-3V7" stroke="rgba(11,16,32,.65)" stroke-width="1.6"/>
-                  <path d="M6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5" stroke="rgba(139,92,246,.95)" stroke-width="1.6"/>
-                </svg>
-                Data
-              </div>
+              <div class="skill-head">Data</div>
               <ul>
                 <li>Pandas</li>
                 <li>NumPy</li>
@@ -862,7 +459,7 @@ data insights into practical solutions. Passionate about developing intelligent 
         </div>
       </section>
 
-      <!-- EDUCATION -->
+      <!-- ================= EDUCATION ================= -->
       <section id="education">
         <div class="container">
           <div class="section-head">
@@ -887,7 +484,7 @@ data insights into practical solutions. Passionate about developing intelligent 
         </div>
       </section>
 
-      <!-- CONTACT -->
+      <!-- ================= CONTACT ================= -->
       <section id="contact">
         <div class="container">
           <div class="section-head">
@@ -900,14 +497,79 @@ data insights into practical solutions. Passionate about developing intelligent 
           </div>
 
           <div class="contact">
-            <a class="reveal" data-reveal href="#" target="_blank" rel="noopener">
-              <svg class="icon" viewBox="0 0 24 24" fill="none">
-                <path d="M12 2.5a9.5 9.5 0 00-3 18.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.2-3.4-1.2-.5-1.2-1.2-1.5-1.2-1.5-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 .1 1.6-.8 1.8-1.2.1-.7.4-1.2.7-1.5-2.2-.2-4.6-1.1-4.6-5 0-1.1.4-2 1.1-2.7-.1-.3-.5-1.3.1-2.7 0 0 .9-.3 2.8 1.1a9.4 9.4 0 015.2 0c1.9-1.4 2.8-1.1 2.8-1.1.6 1.4.2 2.4.1 2.7.7.7 1.1 1.6 1.1 2.7 0 3.9-2.4 4.8-4.7 5 .4.3.7 1 .7 1.9v2.8c0 .3.2.6.7.5A9.5 9.5 0 0012 2.5z"
-                      stroke="rgba(11,16,32,.75)" stroke-width="1.2" />
-              </svg>
+            <a class="reveal" data-reveal
+               href="https://github.com/AbdelrahmanAbushamaleh"
+               target="_blank" rel="noopener">
               GitHub
             </a>
 
-            <a class="reveal delay-1" data-reveal href="#" target="_blank" rel="noopener">
-              <svg class="icon" viewBox="0 0 24 24" fill="none">
-                <path d="M6.5 9.5v10M6.5 6.8a1.6 1.6 0 110-
+            <a class="reveal delay-1" data-reveal
+               href="https://www.linkedin.com/in/abdelrahman-abushamaleh/"
+               target="_blank" rel="noopener">
+              LinkedIn
+            </a>
+
+            <a class="reveal delay-2" data-reveal
+               href="mailto:your@email.com">
+              Email
+            </a>
+          </div>
+        </div>
+      </section>
+            <!-- ================= RESUME ================= -->
+      <!-- This section fixes the nav link #resume -->
+      <section id="resume">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <h2 class="reveal" data-reveal>Resume</h2>
+              <p class="reveal delay-1" data-reveal>
+                A concise overview of my background. Full PDF available upon request.
+              </p>
+            </div>
+          </div>
+
+          <div class="edu-card reveal" data-reveal>
+            <p>
+              AI / Machine Learning Engineer with experience in Computer Vision,
+              Deep Learning, and data-driven systems. Skilled in Python-based ML
+              pipelines, model evaluation, and applied research.
+            </p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+      <div class="container">
+        © 2025 Abdelrahman Abushamaleh — AI / Machine Learning Engineer
+      </div>
+    </footer>
+  </div>
+
+  <!-- ================= REVEAL ANIMATION SCRIPT ================= -->
+  <!-- THIS IS THE KEY FIX THAT MAKES EVERYTHING WORK -->
+  <script>
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+
+    document.querySelectorAll('[data-reveal]').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
+
+</body>
+</html>
+
+
