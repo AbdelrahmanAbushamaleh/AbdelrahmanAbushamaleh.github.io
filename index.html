@@ -228,20 +228,33 @@
       flex-wrap:wrap;
     }
 
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      gap:10px;
-      padding:10px 12px;
-      border-radius:14px;
-      border:1px solid rgba(120,120,140,.18);
-      background: rgba(255,255,255,.62);
-      color:var(--text);
+    .download-btn{
+      margin-top:14px;
+      display:inline-flex;
+      align-items:center;
+      gap:12px;
+      padding:12px 18px;
+      border-radius:10px;
+      border:1px solid rgba(91,124,250,.35);
+      background:#fff;
       font-weight:600;
       font-size:14px;
-      cursor:pointer;
-      transition: transform .18s ease, box-shadow .18s ease, background .18s ease, border-color .18s ease;
-      will-change: transform;
-    }
+      width:auto;          /* prevents full width */
+      max-width:fit-content;
+      transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+    .pdf-icon{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:4px 8px;
+      border-radius:6px;
+      font-size:12px;
+      font-weight:700;
+      background: linear-gradient(135deg, #e11d48, #be123c);
+      color:#fff;
+}
+
     .btn:hover{
       transform: translateY(-2px);
       box-shadow: 0 14px 35px rgba(20,30,60,.12);
@@ -619,7 +632,7 @@
           </div>
           <div class="stat">
             <b>Strengths</b>
-            <span>•Fast prototyping & iteration<br/>• Clean & reproducible pipelines</span>
+            <span>Fast prototyping & iteration<br/>• Clean & reproducible pipelines</span>
           </div>
           <div class="stat">
             <b>Stack</b>
@@ -833,7 +846,6 @@
     <section id="education">
       <div class="section-title">
         <h2 class="reveal">Education</h2>
-        <div class="hint reveal delay1">Simple timeline with gentle fade-in.</div>
       </div>
 
       <div class="card timeline reveal">
@@ -855,9 +867,10 @@
 
         <div class="card resume-card reveal">
           <a class="download-btn"
-           href="Abdelrahman_Abushamaleh_Resume.pdf"
-           download>
-           Download Resume (PDF)
+             href="Abdelrahman_Abushamaleh_Resume.pdf"
+             download>
+             <span class="pdf-icon">PDF</span>
+             <span>Resume</span>
           </a>
         </div>
     </section>
