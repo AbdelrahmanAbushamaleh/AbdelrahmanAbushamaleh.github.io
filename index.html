@@ -48,17 +48,20 @@
       opacity:.55;
     }
     .grid{
-      position:absolute; inset:-40px;
+      position:absolute;
+      inset:-40px;
       background:
         linear-gradient(to right, rgba(11,16,32,.06) 1px, transparent 1px),
         linear-gradient(to bottom, rgba(11,16,32,.06) 1px, transparent 1px);
       background-size: 46px 46px;
-      mask-image: radial-gradient(closest-side at 50% 30%, rgba(0,0,0,.9), rgba(0,0,0,.1) 65%, transparent 85%);
+      mask-image: radial-gradient(
+        closest-side at 50% 30%,
+        rgba(0,0,0,.9),
+        rgba(0,0,0,.1) 65%,
+        transparent 85%
+      );
+      opacity:0.35;                /* 🔹 reduces tiled/repeated look */
       animation:gridFloat 14s ease-in-out infinite;
-    }
-    @keyframes gridFloat{
-      0%,100%{ transform:translate3d(0,0,0) scale(1); }
-      50%{ transform:translate3d(0,-12px,0) scale(1.02); }
     }
 
     .nodes{
@@ -229,31 +232,33 @@
     }
 
     .download-btn{
-      margin-top:14px;
       display:inline-flex;
       align-items:center;
-      gap:12px;
-      padding:12px 18px;
-      border-radius:10px;
-      border:1px solid rgba(91,124,250,.35);
-      background:#fff;
+      gap:10px;
+      padding:10px 14px;
+      border-radius:8px;
+      border:1px solid rgba(11,16,32,.25);
+      background:#ffffff;
       font-weight:600;
       font-size:14px;
-      width:auto;          /* prevents full width */
-      max-width:fit-content;
-      transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
-}
+      box-shadow:0 6px 18px rgba(20,30,60,.08);
+      transition: all .2s ease;
+    }
+
+    .download-btn:hover{
+        transform: translateY(-2px);
+        box-shadow:0 12px 30px rgba(20,30,60,.14);
+        border-color: rgba(91,124,250,.55);
+    }
+
     .pdf-icon{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding:4px 8px;
-      border-radius:6px;
-      font-size:12px;
+      padding:3px 7px;
+      border-radius:4px;
+      font-size:11px;
       font-weight:700;
-      background: linear-gradient(135deg, #e11d48, #be123c);
+      background:#e11d48;
       color:#fff;
-}
+    }
 
     .btn:hover{
       transform: translateY(-2px);
@@ -422,7 +427,12 @@
     }
     .edu h3{margin:0; font-size:15px;}
     .edu p{margin:8px 0 0; color:var(--muted); font-size:13.6px; line-height:1.55;}
-
+    /* ---------- Resume ---------- */
+    .resume-inline{
+      display:flex;
+      align-items:center;
+      margin-top:12px;     
+    }
     /* ---------- Contact ---------- */
     .contact{
       display:flex;
@@ -865,7 +875,7 @@
           <h2 class="reveal">Resume</h2>
          </div>
 
-        <div class="card resume-card reveal">
+        <div class="resume-inline reveal">
           <a class="download-btn"
              href="Abdelrahman_Abushamaleh_Resume.pdf"
              download>
