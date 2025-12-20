@@ -81,7 +81,9 @@
       background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.9), rgba(255,255,255,.2));
       border:1px solid rgba(91,124,250,.35);
       box-shadow: 0 0 0 6px rgba(91,124,250,.06);
-      animation: nodePulse 3.2s ease-in-out infinite;
+      animation: 
+        nodePulse 3.2s ease-in-out infinite,
+        nodeDrift 55s linear infinite;
     }
     .node.p2{ border-color:rgba(139,92,246,.35); box-shadow: 0 0 0 6px rgba(139,92,246,.06); animation-duration:3.8s;}
     .node.p3{ border-color:rgba(91,124,250,.22); box-shadow: 0 0 0 6px rgba(91,124,250,.04); animation-duration:4.4s;}
@@ -89,6 +91,23 @@
     @keyframes nodePulse{
       0%,100%{ transform:translateY(0) scale(1); opacity:.95;}
       50%{ transform:translateY(-6px) scale(1.08); opacity:.75;}
+    }
+    /* background grid slow float */
+    @keyframes gridFloat{
+      0%,100%{ transform: translateY(0) scale(1); }
+      50%{ transform: translateY(-14px) scale(1.02); }
+    }
+
+/* background grid diagonal drift */
+    @keyframes gridDrift{
+      from { background-position: 0 0; }
+      to   { background-position: 420px 260px; }
+    }
+
+/* neural nodes horizontal drift */
+    @keyframes nodeDrift{
+      from { transform: translateX(0); }
+      to   { transform: translateX(-260px); }
     }
 
     .lines{
@@ -98,8 +117,9 @@
     }
     .lines svg{width:100%; height:100%;}
     .flow{
-      stroke-dasharray: 8 14;
-      animation: dash 9s linear infinite;
+        stroke-dasharray: 6 12;
+        animation: dash 18s linear infinite;
+        opacity:.6;
     }
     @keyframes dash{
       to { stroke-dashoffset: -220; }
